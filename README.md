@@ -1,2 +1,56 @@
-# applied-is-project-2026
-Fitness Center Information System
+# Fitness Center Information System
+
+## 1. Описание проекта
+
+Информационная система фитнес-центра предназначена для автоматизации учета клиентов, абонементов, тренеров и тренировок.
+
+Система позволяет хранить информацию о клиентах, регистрировать абонементы, вести учет тренеров и записывать клиентов на тренировки.
+
+## 2. ER-диаграмма базы данных
+
+![ER-диаграмма](Fitness_Center_ER.png)
+
+### Основные таблицы
+
+- Clients — информация о клиентах.
+- Memberships — абонементы клиентов.
+- Trainers — информация о тренерах.
+- Sessions — записи на тренировки.
+
+### Связи между таблицами
+
+- Clients → Memberships (1:N)
+- Clients → Sessions (1:N)
+- Trainers → Sessions (1:N)
+
+## 3. Используемые технологии
+
+- Python
+- FastAPI
+- Uvicorn
+- SQLModel
+- Streamlit
+- GitHub
+- Mermaid / draw.io
+
+## 4. Структура проекта
+
+- app/database — работа с базой данных.
+- app/routers — API-маршруты.
+- app/frontend — пользовательский интерфейс.
+- app/main.py — точка входа FastAPI.
+- requirements.txt — зависимости Python.
+
+## 5. Запуск проекта
+
+Установить зависимости:
+
+pip install -r requirements.txt
+
+Запустить сервер:
+
+uvicorn app.main:app --reload
+
+## 6. Дальнейшая разработка
+
+В следующих лабораторных работах планируется реализация базы данных, REST API, пользовательского интерфейса, Docker и автоматизированного тестирования.
